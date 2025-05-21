@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 API_KEY  = os.getenv("IMPEX_API_KEY")
-BASE_URL = "https://www.impex-jp.com/api"
+BASE_URL = "https://api.impex-jp.com/api"
 
 @app.route("/search")
 def search():
