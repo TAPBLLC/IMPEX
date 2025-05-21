@@ -22,3 +22,9 @@ def search():
 
 if __name__=="__main__":
     app.run(host="0.0.0.0", port=5000)
+
+@app.route("/ping")
+def ping():
+    # Try a bare HEAD request to test connectivity
+    r = requests.head("https://api.impex-jp.com", timeout=5)
+    return (f"API HEAD status: {r.status_code}", r.status_code)
