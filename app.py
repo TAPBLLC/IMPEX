@@ -4,7 +4,7 @@ import os, requests
 app = Flask(__name__)
 
 API_KEY  = os.getenv("IMPEX_API_KEY")
-BASE_URL = "https://api.impex-jp.com/"
+BASE_URL = "https://api.impex-jp.com"
 
 # 1) A simple “home” route to prove the app is running
 @app.route("/")
